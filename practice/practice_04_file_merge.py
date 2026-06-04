@@ -27,8 +27,7 @@ if not os.path.exists(info_path) or not os.path.exists(sales_path):
 else:
     # 住所が正しければ、Pandasの工具箱でバーチャルExcel（DataFrame）に変換して読み込む
     df_info = pd.read_csv(info_path)
-    df_sales = pd.read_csv(sales_path)
-
+    q                                                                               df_sales = pd.read_csv(sales_path)
     print("📥 [入力完了] 外部CSVデータの自動読み込みに成功しました。")
 
     # ====================================================
