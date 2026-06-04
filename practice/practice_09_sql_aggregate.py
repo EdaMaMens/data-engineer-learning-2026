@@ -13,11 +13,13 @@ db_path = os.path.join(db_dir, 'analytics_basic.db')
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
+cursor.execute("DROP TABLE IF EXISTS orders")
 # 案件データを管理するテーブルを建築（area と budget_man_yen を用意）
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     client_name TEXT,
+    area TEXT,
     budget_man_yen INTEGER
 )
 ''')
